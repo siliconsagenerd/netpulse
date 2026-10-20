@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.db
+.env
+# Node
+node_modules/
+dist/
+# OS
+.DS_Store
+
+# Virtual environments
+.venv/
+venv/
+# Test artifacts
+frontend/test-results/
+frontend/playwright-report/
+coverage/
+*.sqlite
+*.log
+
+# Local secret env files (never commit)
+.env.*
+*.env.local
+.env*
+.memory-symlink-target.bak
+.vercel

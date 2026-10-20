@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    ports: ["8000:8000"]
+    environment:
+      DATABASE_URL: sqlite:///./netpulse.db
+      CORS_ORIGINS: "http://localhost:5173,http://localhost"
+    volumes: ["./backend/netpulse.db:/app/netpulse.db"]
+  frontend:
+    build: ./frontend
+    ports: ["80:80"]
+    depends_on: [backend]
